@@ -32,10 +32,21 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public boolean addStudent(Student std) {
-//		if(studentDao.insertStudent(std) > 0) {
-//			return true;
-//		}
-//		return false;
 		return studentDao.insertStudent(std) > 0 ;
+	}
+
+	@Override
+	public Student getStudentById(int studentId) {
+		return studentDao.getStudentById(studentId);
+	}
+
+	@Override
+	public boolean deleteStudent(int studentId) {
+		return studentDao.deleteStudent(studentId);
+	}
+
+	@Override
+	public boolean updateStudent(Student std) {
+		return studentDao.updateStudent(std);
 	}
 }

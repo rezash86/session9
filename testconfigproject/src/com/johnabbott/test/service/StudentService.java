@@ -5,8 +5,13 @@ import java.util.List;
 import com.johnabbott.test.model.Student;
 
 public interface StudentService {
-	public List<Student> getStudents();
-	
 	public boolean addStudent(Student std);
 	
+	public List<Student> getStudents(); // Read
+	
+	public Student getStudentById(int studentId); // Read
+	
+	public boolean deleteStudent(int studentId); //DELETE
+	
+	public boolean updateStudent(Student std); // UPDATE
 }
